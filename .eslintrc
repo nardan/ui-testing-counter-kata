@@ -1,0 +1,30 @@
+{
+	"root": true,
+	"extends": ["ao-react", "plugin:jsx-a11y/strict"],
+	"plugins": ["react-hooks", "jsx-a11y"],
+	"env": {
+		"es6": true,
+		"browser": true
+	},
+	"overrides": [
+		{
+			"files": ["*.config.js", ".babelrc.js"],
+			"env": {
+				"node": true
+			}
+		},
+		{
+			"files": ["*.test.js"],
+			"env": {
+				"node": true,
+				"jest": true
+			}
+		}
+	],
+	"rules": {
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/prop-types": "off",
+		"react/require-default-props": "off"
+	}
+}
